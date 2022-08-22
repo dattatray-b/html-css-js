@@ -1,0 +1,65 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 10px;
+}
+
+.box{
+    background-color: steelblue;
+    color: white;
+    height: 150px;
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+
+
+    display: flex;
+    /* making display flex as we will make it center all h2 */
+    justify-content: center;
+    align-items: center;
+
+    /* below using animation property */
+    transform: translateX(400%);
+    /* this transform translateX will make all 
+    all content to move 400% so that not visbible 
+    on wide screen also */
+
+
+    transition: transform 0.4s ease;
+    /* here firstly we add transition on transform propertt */
+    /* secondly this will make animation much smoother */
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-400%);
+    /* alternate box comes from differnet side  */
+     
+}
+
+.box.show{
+    transform: translateX(0);
+    /* this show class is added so that the conent comes 
+    to the center */
+}
+
+h2{
+    font-size: 45px;
+}

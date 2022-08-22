@@ -1,11 +1,16 @@
 // bascially we are just changing class to active for 
 // each div
 
+
+
 const panels = document.querySelectorAll('.panel');
 // this panels stores a node list kind of an arry consisting fo all panel
+
+
 // now will looping through this node list
+
+
 // using higher order method foreach which takes function as argument
-// in this case we are using arrow function
 
 
 panels.forEach( (panel) => {

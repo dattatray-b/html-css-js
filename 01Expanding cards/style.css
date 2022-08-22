@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+.container{
+    display: flex;
+    width: 90vw;
+    /* 90vw takes 90 frames in  total 100 frames of continer class */
+
+}
+
+.panel {
+    background-size: cover;
+    /* this cover makes whole image visible even in small window */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    /* 80vh is done as we dont want to cover whole height of the continer */
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    /* this flex 0.5 makes width of all cards same
+    same we will change in active class to expand it */
+    margin: 10px;
+    /* margin between cards */
+    position: relative;
+    /* this relative makes easy to move contents 
+    in panel which is h3 in this case move easy */
+    transition: flex 0.7s ease-in;
+    /* transition on flex property */
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    /* we made opacity 0 so that h3 is not visible and 
+    we will make it visible in active class */
+}
+
+
+.panel.active{
+    flex: 5;
+    /* this will make expand where we flexed as 0.5 */
+
+}
+
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.1s ease-in 0.4s;
+    /* this transiton is added to remove that h3 falling effect */
+}
+
+
+/* IF the screen is too small we want to show only
+3 cards not all so will add media quiry */
+
+@media(max-width: 380px) {
+
+    /* this means effect will take place only if 
+    screen is below 480px */
+
+    .container {
+        width: 100vw;
+    }
+
+    /* this container width is done 100vw as 
+    to take as much place avilable in continer */
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    /* this nth of type is pseudo selevtor 
+    this will remove last 2 cards that is 4 and 5 */
+    }
+
+}
+
+
