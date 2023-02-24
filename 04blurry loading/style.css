@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#image{
+    background-image: url(./img/viratkohli.jpg);
+    /* border: 10px solid red; */
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#image{
+    opacity: 0;
+
+}
+
+#image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 4s;
+    opacity: 0.1;
+
+}
+
+
+.per{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    /* width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white; */
+}
+
+.eww{
+    display: block;
+}
+
+
+/* @media( min-width: 800px) {
+    #image {
+        width: 100%;
+    }
+} */
