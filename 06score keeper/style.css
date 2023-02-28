@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.score{
+    display: flex;
+    flex-direction: row;
+}
+
+.s1,.s2{
+    margin: 10px;
+}
+
+.btn{
+    display: flex;
+}
+
+button{
+    margin: 5px;
+    font-size: 20px;
+}
+
+
+.one{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.two{
+    background-color: rgb(245, 245, 5);
+    cursor: pointer;
+}
+
+.reset{
+    background-color: red;
+    padding: 1%;
+    color: white;
+    cursor: pointer;
+}
+
+.toggle{
+    color: black;
+}
